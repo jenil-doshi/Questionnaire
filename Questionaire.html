@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Start Quiz</title>
+<script type="text/javascript">
+function passName(){
+var username = document.getElementById("username").value
+document.forms[0].action = "page1.html?" + username; 
+}
+</script>
+<body>
+<center>
+	<form action="" method="post" style="margin-top: 15%">
+		<table border="1" RULES=NONE FRAME=BOX cellPadding="10px" cellSpacing="0px">
+		<tr>
+			<td style="background-color: #D1CDD0;"><center style="color: black">User
+					Login</center></td>
+		</tr>
+			<tr>
+				<td>UserName: &nbsp; &nbsp;<input type="text" name="username" id="username" required></td>
+			</tr>
+			<tr>
+				<td>Password: &nbsp; &nbsp; &nbsp;<input type="password" name="pwd"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit"
+					style="
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 3px;
+    background-color: white; margin-left: 75%;
+"  onClick="passName()"></td>
+			</tr>
+		</table>
+	</form>
+</center>
+</body>
+</html>

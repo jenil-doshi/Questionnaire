@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page6</title>
+<style>
+body {
+	font-size: 1em;
+}
+</style>
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	
+function finish()
+{
+	document.getElementById("finish").innerHTML = "Thank You !!!"	
+}
+
+function showResults(){
+
+var string = window.location.search.substring(1).split('&');
+var keyValuePairC = string[0].split('=');
+var RkeyValuePairC = string[1].split('=');
+var VkeyValuePairC = string[2].split('=');
+
+var QcorrectAnswers = keyValuePairC[1].split(',');
+var RcorrectAnswers = RkeyValuePairC[1].split(',');
+var VcorrectAnswers = VkeyValuePairC[1].split(',');
+
+var score1 = (+QcorrectAnswers/2) * 100;
+var score2 = (+RcorrectAnswers/1) * 100;
+var score3 = (+VcorrectAnswers/1) * 100;
+document.getElementById("qCount").innerHTML = 2;
+document.getElementById("rCount").innerHTML = 1;
+document.getElementById("vCount").innerHTML = 1;
+document.getElementById("qCount1").innerHTML = QcorrectAnswers;
+document.getElementById("rCount1").innerHTML = RcorrectAnswers;
+document.getElementById("vCount1").innerHTML = VcorrectAnswers;
+document.getElementById("qScore1").innerHTML = score1;
+document.getElementById("qScore2").innerHTML = score2;
+document.getElementById("qScore3").innerHTML = score3;
+}
+
+</script>
+</head>
+<body onLoad="showResults()">
+<center>
+<form action="" method="post" style="margin-top: 10%">
+  <table width="30%" RULES="none" FRAME="box" cellPadding="10px" cellSpacing="0px">
+    <tr>
+      <td style="background-color: #D1CDD0;"><center
+							style="color: black">
+          Score Card
+        </center></td>
+    </tr>
+   
+    <tr>
+    
+      <td>
+      <details>
+			<summary>Quantitative Section</summary><br>
+		Number of Questions Answered:<a id="qCount"></a>
+        <br>
+        Number of correct answers: <a id="qCount1"></a>
+        <br>
+        Score: <a id="qScore1"></a>
+	
+		</details><br>
+        <details>
+			<summary>Reading Section</summary><br>
+		Number of Questions Answered:<a id="rCount"></a><br>
+        Number of correct answers:<a id="rCount1"></a><br>
+        Score: <a id="qScore2"></a>
+		</details><br>
+        <details>
+			<summary>Audio/Video Section</summary><br>
+		Number of Questions Answered:<a id="vCount"></a><br>
+        Number of correct answers:<a id="vCount1"></a><br>
+        Score: <a id="qScore3"></a>
+		</details><br>
+        <center><a id="finish"></a></center><br>
+        <center><input type="button" onClick="finish()" value="Finish" style="
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 3px;
+    background-color: white;
+"></center></td></tr>
+  </table>
+</form>
+</center>
+</body>
+</html>

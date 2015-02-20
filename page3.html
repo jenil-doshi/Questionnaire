@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page3</title>
+<style>
+body {
+	font-size: 1em;
+}
+</style>
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+
+function count(){
+var RcorrectAnswers = 0;
+var string = window.location.search.substring(1).split('&');
+var keyValuePairC = string[0].split('=');
+var QcorrectAnswers = keyValuePairC[1].split(',');
+
+var checked1 = document.getElementById("option1").checked;
+var checked2 = document.getElementById("inneroption1").checked;
+if(checked1 && checked2)
+{	
+		RcorrectAnswers += 1;
+	document.forms[0].action = "page4.html?qc=" + QcorrectAnswers + "&rc=" + RcorrectAnswers;  
+}
+else
+{
+	document.forms[0].action = "page4.html?qc=" + QcorrectAnswers + "&rc=" + RcorrectAnswers; 
+}
+}
+
+
+function moreq1(){
+document.getElementById("inneroption1").style.visibility = "visible";	
+document.getElementById("text1").style.visibility = "visible";
+document.getElementById("inneroption2").style.visibility = "visible";	
+document.getElementById("text2").style.visibility = "visible";
+document.getElementById("inneroption3").style.visibility = "visible";	
+document.getElementById("text3").style.visibility = "visible";
+document.getElementById("inneroption4").style.visibility = "hidden";
+document.getElementById("inneroption5").style.visibility = "hidden";
+document.getElementById("inneroption6").style.visibility = "hidden";
+document.getElementById("inneroption7").style.visibility = "hidden";
+document.getElementById("inneroption8").style.visibility = "hidden";
+document.getElementById("inneroption9").style.visibility = "hidden";
+
+document.getElementById("text4").style.visibility = "hidden";
+document.getElementById("text5").style.visibility = "hidden";
+document.getElementById("text6").style.visibility = "hidden";
+document.getElementById("text7").style.visibility = "hidden";
+document.getElementById("text8").style.visibility = "hidden";
+document.getElementById("text9").style.visibility = "hidden";
+moreOptions1 = document.getElementById("option1").checked;
+if(moreOptions1)
+{
+	document.getElementById("mark1").innerHTML = "$"+650;
+}
+}
+
+
+function moreq2(){
+document.getElementById("inneroption4").style.visibility = "visible";	
+document.getElementById("text4").style.visibility = "visible";
+document.getElementById("inneroption5").style.visibility = "visible";	
+document.getElementById("text5").style.visibility = "visible";
+document.getElementById("inneroption6").style.visibility = "visible";	
+document.getElementById("text6").style.visibility = "visible";
+document.getElementById("inneroption1").style.visibility = "hidden";
+document.getElementById("inneroption2").style.visibility = "hidden";
+document.getElementById("inneroption3").style.visibility = "hidden";
+document.getElementById("inneroption7").style.visibility = "hidden";
+document.getElementById("inneroption8").style.visibility = "hidden";
+document.getElementById("inneroption9").style.visibility = "hidden";
+
+document.getElementById("text1").style.visibility = "hidden";
+document.getElementById("text2").style.visibility = "hidden";
+document.getElementById("text3").style.visibility = "hidden";
+document.getElementById("text7").style.visibility = "hidden";
+document.getElementById("text8").style.visibility = "hidden";
+document.getElementById("text9").style.visibility = "hidden";
+moreOptions2 = document.getElementById("option2").checked;
+if(moreOptions2)
+{
+	document.getElementById("mark1").innerHTML = "$"+550;
+}
+}
+
+
+function moreq3(){
+document.getElementById("inneroption7").style.visibility = "visible";	
+document.getElementById("text7").style.visibility = "visible";
+document.getElementById("inneroption8").style.visibility = "visible";	
+document.getElementById("text8").style.visibility = "visible";
+document.getElementById("inneroption9").style.visibility = "visible";	
+document.getElementById("text9").style.visibility = "visible";
+document.getElementById("inneroption1").style.visibility = "hidden";
+document.getElementById("inneroption2").style.visibility = "hidden";
+document.getElementById("inneroption3").style.visibility = "hidden";
+document.getElementById("inneroption4").style.visibility = "hidden";
+document.getElementById("inneroption5").style.visibility = "hidden";
+document.getElementById("inneroption6").style.visibility = "hidden";
+
+document.getElementById("text1").style.visibility = "hidden";
+document.getElementById("text2").style.visibility = "hidden";
+document.getElementById("text3").style.visibility = "hidden";
+document.getElementById("text4").style.visibility = "hidden";
+document.getElementById("text5").style.visibility = "hidden";
+document.getElementById("text6").style.visibility = "hidden";
+
+moreOptions3 = document.getElementById("option3").checked;
+if(moreOptions3)
+{
+	document.getElementById("mark1").innerHTML = "$"+650;
+}
+}
+
+
+function hidden(){
+
+document.getElementById("inneroption1").style.visibility = "hidden";
+document.getElementById("inneroption2").style.visibility = "hidden";
+document.getElementById("inneroption3").style.visibility = "hidden";
+document.getElementById("inneroption4").style.visibility = "hidden";
+document.getElementById("inneroption5").style.visibility = "hidden";
+document.getElementById("inneroption6").style.visibility = "hidden";
+document.getElementById("inneroption7").style.visibility = "hidden";
+document.getElementById("inneroption8").style.visibility = "hidden";
+document.getElementById("inneroption9").style.visibility = "hidden";
+document.getElementById("text1").style.visibility = "hidden";
+document.getElementById("text2").style.visibility = "hidden";
+document.getElementById("text3").style.visibility = "hidden";
+document.getElementById("text4").style.visibility = "hidden";
+document.getElementById("text5").style.visibility = "hidden";
+document.getElementById("text6").style.visibility = "hidden";
+document.getElementById("text7").style.visibility = "hidden";
+document.getElementById("text8").style.visibility = "hidden";
+document.getElementById("text9").style.visibility = "hidden";
+}
+	
+	
+function mark2()
+{
+inneroption1 = document.getElementById("inneroption1").checked;
+inneroption2 = document.getElementById("inneroption2").checked;
+inneroption3 = document.getElementById("inneroption3").checked;
+inneroption4 = document.getElementById("inneroption4").checked;
+inneroption5 = document.getElementById("inneroption5").checked;
+inneroption6 = document.getElementById("inneroption6").checked;
+inneroption7 = document.getElementById("inneroption7").checked;
+inneroption8 = document.getElementById("inneroption8").checked;
+inneroption9 = document.getElementById("inneroption9").checked;
+if(inneroption1)
+{
+	document.getElementById("mark2").innerHTML = "Twitter";
+}
+if(inneroption2)
+{
+	document.getElementById("mark2").innerHTML = "Google";
+}
+if(inneroption3)
+{
+	document.getElementById("mark2").innerHTML = "Facebook";
+}
+if(inneroption4)
+{
+	document.getElementById("mark2").innerHTML = "Twitter";
+}
+if(inneroption5)
+{
+	document.getElementById("mark2").innerHTML = "Google";
+}
+if(inneroption6)
+{
+	document.getElementById("mark2").innerHTML = "Facebook";
+}
+if(inneroption7)
+{
+	document.getElementById("mark2").innerHTML = "Twitter";
+}
+if(inneroption8)
+{
+	document.getElementById("mark2").innerHTML = "Google";
+}
+if(inneroption9)
+{
+	document.getElementById("mark2").innerHTML = "Facebook";
+}	
+}
+
+
+</script>
+</head>
+<body onLoad="hidden()">
+<center>
+<form action="" method="post" style="margin-top: 10%">
+  <table width="50%" frame="border" rules="none" cellPadding="10px" cellSpacing="0px">
+    <tr>
+      <td colspan="3" style="background-color: #D1CDD0;"><center
+							style="color: black">
+          Question3
+        </center></td>
+    </tr>
+    <tr>
+      <td colspan="2"> As per the latest twitter news, complete the article snippet given by selecting  appropriate choices  for the blanks </td>
+      <td rowspan="5"><blockquote>Twitter wants more cash. The company announced
+          <mark><a id="mark1">$____</a></mark>
+          million debt offerings in a filling today , each with a potential $100 increase provided that the sales oversubscribed. Assuming full tip, including the $100 million boosters
+          <mark><a id="mark2">_______</a></mark>
+          will raise up to $1.5billion with the two offerings.</blockquote><br>
+        Source: http://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="q" id="option1" onClick="moreq1()" required> 
+        Option 1 mark 1: $650 </td>
+      <td>
+      <input type='radio' name='innerq1' id='inneroption1' onClick="mark2()"> 
+      <a id="text1">Option 1 mark 2: Twitter</a> <br>
+      <input type='radio' name='innerq2' id='inneroption4' onClick="mark2()" > 
+      <a id="text4">Option 2 mark 2: Twitter</a> <br>
+      <input type='radio' name='innerq3' id='inneroption7' onClick="mark2()" > 
+      <a id="text7">Option 3 mark 2: Twitter</a> <br>
+      </td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="q" id="option2" onClick="moreq2()" required>
+        Option 2 mark 1: $550</td>
+      <td>
+       <input type='radio' name='innerq1' id='inneroption2' onClick="mark2()" > 
+      <a id="text2">Option 1 mark 2: Google</a> <br> 
+      <input type='radio' name='innerq2' id='inneroption5' onClick="mark2()" >
+      <a id="text5">Option 2 mark 2: Google</a> <br> 
+      <input type='radio' name='innerq3' id='inneroption8' onClick="mark2()" >
+      <a id="text8">Option 3 mark 2: Google</a> <br> 
+      
+      </td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="q" id="option3" onClick="moreq3()" required>
+        Option 3 mark 1: $450</td>
+          <td>
+          <input type='radio' name='innerq1' id='inneroption3' onClick="mark2()" > 
+      <a id="text3">Option 1 mark 2: Facebook </a><br>    
+     <input type='radio' name='innerq2' id='inneroption6' onClick="mark2()" >
+      <a id="text6">Option 2 mark 2: Facebook </a><br>   
+       <input type='radio' name='innerq3' id='inneroption9' onClick="mark2()" >
+      <a id="text9">Option 3 mark 2: Facebook </a><br>
+     
+          </td>
+    </tr>
+    <tr>
+      <td><input type="submit" onClick="count()" style="
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 3px;
+    background-color: white;
+" value="Submit & Next Question"></td>
+      <td><input type="submit" onClick="cancelClear()" style="
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 3px;
+    background-color: white;
+" value="Cancel & Clear Selection" ></td></tr>
+  </table>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page5</title>
+<style>
+body {
+	font-size: 1em;
+}
+</style>
+<script>
+function count(){
+	
+var string = window.location.search.substring(1);
+document.forms[0].action = "page6.html?" + string;
+}
+</script>
+</head>
+<body>
+<center>
+<form action="" method="post" style="margin-top: 10%">
+  <table width="0%" border="1" RULES=NONE FRAME=BOX cellPadding="10px" cellSpacing="0px">
+    <tr>
+      <td colspan="2" style="background-color: #D1CDD0;"><center
+							style="color: black">
+          Survey
+        </center></td>
+    </tr>
+    <tr>
+      <td colspan="2">How did you like the center?</td>
+    </tr>
+    <tr>
+      <td colspan="2">Comments: <textarea rows="4" cols="50" required>
+</textarea ></td>
+    </tr>
+    <tr>
+      <td colspan="2"> Select Text Area Location: </td>
+    </tr>
+    <tr>
+      <td>City:<input list="city" name="city" required>
+  <datalist id="city">
+    <option value="San Jose"></option>
+    <option value="San Francisco"></option>
+    <option value="Mountain View"></option>
+    <option value="Palo Alto"></option>
+    <option value="Santa Clara"></option>
+  </datalist></td>
+      <td>RoomNumber#:<input list="room" name="room" required>
+  <datalist id="room">
+    <option value="Room 1"></option>
+    <option value="Room 2"></option>
+    <option value="Room 3"></option>
+    <option value="Room 4"></option>
+    <option value="Room 5"></option>
+  </datalist></td>
+    </tr>
+    <tr>
+      <td><input type="submit" onClick="count()" style="
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 3px;
+    background-color: white;
+" value="Submit & Next Question"></td>
+      <td><input type="submit"  style="
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 3px;
+    background-color: white;
+" value="Cancel & Clear Selection" ></td></tr>
+  </table>
+</form></center>
+</body>
+</html>
